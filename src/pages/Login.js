@@ -16,7 +16,7 @@ function Login() {
             const response = await api.post("/auth/login/", credentials);
             localStorage.setItem("access_token", response.data.access);
             localStorage.setItem("refresh_token", response.data.refresh);
-            navigate("/dashboard"); // Redirect to dashboard
+            navigate("/dashboard"); 
         } catch (error) {
             setError("Invalid username or password.");
         }
